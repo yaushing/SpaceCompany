@@ -319,8 +319,8 @@ function updateCost(){
 	charcoalEngineMetalCost = Math.floor(50 * Math.pow(1.1,charcoalEngine));
 	charcoalEngineGemCost = Math.floor(25 * Math.pow(1.1,charcoalEngine));
 
-	solarPanelMetalCost = Math.floor(30 * Math.pow(1.1,solarPanel));
-	solarPanelGemCost = Math.floor(35 * Math.pow(1.1,solarPanel));
+	solarPanelMetalCost = Math.floor(30 * Math.pow(1.01,solarPanel));
+	solarPanelGemCost = Math.floor(35 * Math.pow(1.01,solarPanel));
 
 	methaneStationLunariteCost = Math.floor(110 * Math.pow(1.1,methaneStation));
 	methaneStationTitaniumCost = Math.floor(90 * Math.pow(1.1,methaneStation));

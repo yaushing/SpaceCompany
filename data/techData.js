@@ -474,7 +474,7 @@ Game.techData = (function () {
         newTechs: ['unlockBatteries'],
         tabAlerts: ['resources'],
         onApply: function() {
-            solarPanelOutput = 3;
+            solarPanelOutput += 10;
         }
     });
 

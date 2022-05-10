@@ -43,7 +43,7 @@ Game.resourceData = (function () {
         desc: 'Energy is created by power sources such as steam engines, solar power and advances even to fusion power and nuclear energy. The maximum you can hold to start with is 100,000 Energy, but batteries are unlockable which can increase this.',
         icon: 'energyIcon',
         category: 'energy',
-        baseCapacity: 50000,
+        baseCapacity: 500000,
         unlocked: false
     };
 
@@ -84,7 +84,7 @@ Game.resourceData = (function () {
         icon: 'oilIcon',
         category: 'earth',
         baseCapacity: 50,
-        unlocked: false
+        unlocked: true
     };
 
     instance.metal = {
@@ -92,7 +92,7 @@ Game.resourceData = (function () {
         desc: 'Metal is one of the primary resources. It is used for many things, including storage upgrades, machinery and most things in space.',
         icon: 'metalIcon',
         category: 'earth',
-        baseCapacity: 50,
+        baseCapacity: 500,
         unlocked: true
     };
 
@@ -143,7 +143,7 @@ Game.resourceData = (function () {
         icon: 'lunariteIcon',
         category: 'innerSol',
         baseCapacity: 50,
-        unlocked: false
+        unlocked: true
     };
 
     instance.methane = {

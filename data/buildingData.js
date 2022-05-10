@@ -29,11 +29,11 @@ Game.buildingData = (function () {
         desc: 'Gains Energy slowly from the sun without using any resources.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 1.5
+            'energy': 100
         },
         cost: {
-            'metal': 30,
-            'gem': 35
+            'metal': 1,
+            'gem': 1
         }
     });
 
