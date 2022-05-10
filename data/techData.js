@@ -464,7 +464,7 @@ Game.techData = (function () {
 
     instance.upgradeSolarTech = $.extend({}, techBase, {
         name: 'Upgrade Solar Technology',
-        desc: 'Upgrading Solar Technology will make solar panels produce 3 Energy per second instead of 1.5.',
+        desc: 'Upgrading Solar Technology will make solar panels produce 300 Energy per second instead of 100.',
         buttonText: 'Upgrade Solar Panels',
         type: TECH_TYPE.UPGRADE,
         costType: COST_TYPE.FIXED,
@@ -474,7 +474,7 @@ Game.techData = (function () {
         newTechs: ['unlockBatteries'],
         tabAlerts: ['resources'],
         onApply: function() {
-            solarPanelOutput += 10;
+            solarPanelOutput += 200;
         }
     });
 
@@ -485,7 +485,7 @@ Game.techData = (function () {
         costType: COST_TYPE.FIXED,
         maxLevel: -1,
         cost: {
-            'science': 100000
+            'science': 0.01
         }
     });
 

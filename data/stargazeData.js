@@ -172,13 +172,13 @@ Game.prestigeData = (function(){
 
 	instance.empowerManualGains = {
 		name: "Empower Manual Gains",
-		desc: "Increase all gain buttons to 20 per click instead of 1.",
+		desc: "Increase all gain buttons to 100 per click instead of 50.",
 		cost: 5,
 		category: "carnelian",
 		opinion: 3,
 		onApply: function(){
 			// old
-			gainNum = 20;
+			gainNum = 100;
 			for(var resource in RESOURCE){
 				if(RESOURCE[resource] != "science")$('#' + RESOURCE[resource] + 'Gain').text(gainNum);
 			}
@@ -190,7 +190,7 @@ Game.prestigeData = (function(){
 			// }
 		},
 		remove: function(){
-	    	gainNum = 1;
+	    	gainNum = 50;
 			for(var resource in RESOURCE){
 				if(RESOURCE[resource] != "science")$('#' + RESOURCE[resource] + 'Gain').text(gainNum);
 			}

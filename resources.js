@@ -59,29 +59,29 @@ function getMaxEnergy() {
 function gainResource(resource){
 	if(resource === RESOURCE.Plasma){
 		if(getResource(RESOURCE.Energy) >= 1000 * gainNum && getResource(RESOURCE.Hydrogen) >= 10 * gainNum && getResource(RESOURCE.Plasma) < getMaxPlasma()){
-			Game.resources.addResource(RESOURCE.Plasma, gainNum);
-			Game.resources.takeResource(RESOURCE.Energy, 1000 * gainNum);
-			Game.resources.takeResource(RESOURCE.Hydrogen, 10 * gainNum);
-			Game.statistics.add('manualResources', gainNum);
+			Game.resources.addResource(RESOURCE.Plasma, 50);
+			Game.resources.takeResource(RESOURCE.Energy, 1000 * 50);
+			Game.resources.takeResource(RESOURCE.Hydrogen, 10 * 50);
+			Game.statistics.add('manualResources', 50);
 		}
 	} else if(resource === RESOURCE.Charcoal){
 		if(getResource(RESOURCE.Charcoal) < getStorage(RESOURCE.Charcoal) && getResource(RESOURCE.Wood) >= 2 * gainNum){
-			Game.resources.addResource(RESOURCE.Charcoal, gainNum);
-			Game.resources.takeResource(RESOURCE.Wood, 2 * gainNum);
-			Game.statistics.add('manualResources', gainNum);
+			Game.resources.addResource(RESOURCE.Charcoal, 50);
+			Game.resources.takeResource(RESOURCE.Wood, 2 * 50);
+			Game.statistics.add('manualResources', 50);
 		}
 	} else if(resource === RESOURCE.Meteorite){
 		if(getResource(RESOURCE.Meteorite) < getStorage(RESOURCE.Meteorite)){
 			if(getResource(RESOURCE.Plasma) >= 3 * gainNum){
-				Game.resources.addResource(RESOURCE.Meteorite, gainNum);
-				Game.resources.takeResource(RESOURCE.Plasma, 3 * gainNum);
-				Game.statistics.add('manualResources', gainNum);
+				Game.resources.addResource(RESOURCE.Meteorite, 50);
+				Game.resources.takeResource(RESOURCE.Plasma, 3 * 50);
+				Game.statistics.add('manualResources', 50);
 			}
 		}
 	} else {
 		if(getResource(resource) < getStorage(resource)){
-			Game.resources.addResource(resource, gainNum);
-			Game.statistics.add('manualResources', gainNum);
+			Game.resources.addResource(resource, 50);
+			Game.statistics.add('manualResources', 50);
 		}
 	}
 }
@@ -319,8 +319,8 @@ function updateCost(){
 	charcoalEngineMetalCost = Math.floor(50 * Math.pow(1.1,charcoalEngine));
 	charcoalEngineGemCost = Math.floor(25 * Math.pow(1.1,charcoalEngine));
 
-	solarPanelMetalCost = Math.floor(30 * Math.pow(1.01,solarPanel));
-	solarPanelGemCost = Math.floor(35 * Math.pow(1.01,solarPanel));
+	solarPanelMetalCost = Math.floor(1 * Math.pow(1,solarPanel));
+	solarPanelGemCost = Math.floor(1 * Math.pow(1,solarPanel));
 
 	methaneStationLunariteCost = Math.floor(110 * Math.pow(1.1,methaneStation));
 	methaneStationTitaniumCost = Math.floor(90 * Math.pow(1.1,methaneStation));
@@ -429,9 +429,9 @@ function updateCost(){
 
 	moonWorkerGemCost = Math.floor(500 * Math.pow(1.1,moonWorker) * T1Price);
 
-	moonDrillOilCost = Math.floor(400 * Math.pow(1.1,moonDrill));
-	moonDrillGemCost = Math.floor(600 * Math.pow(1.1,moonDrill));
-	moonDrillMetalCost = Math.floor(1000 * Math.pow(1.1,moonDrill));
+	moonDrillOilCost = Math.floor(400 * Math.pow(1,moonDrill));
+	moonDrillGemCost = Math.floor(600 * Math.pow(1,moonDrill));
+	moonDrillMetalCost = Math.floor(1000 * Math.pow(1,moonDrill));
 
 	moonQuarrySiliconCost = Math.floor(3500 * Math.pow(1.1,moonQuarry));
 	moonQuarryGemCost = Math.floor(5000 * Math.pow(1.1,moonQuarry));
